@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TrendSwiftAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+  @StateObject private var authViewModel = AuthViewModel()
+  
+  var body: some Scene {
+      WindowGroup {
+          ContentView()
+              .environmentObject(authViewModel)
+      }
+  }
 }

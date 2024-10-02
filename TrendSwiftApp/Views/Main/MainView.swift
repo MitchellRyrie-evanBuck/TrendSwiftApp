@@ -20,7 +20,7 @@ struct MainView: View {
                       Image(systemName: "house")
                   }
               
-              SearchView()
+            SearchContentView()
                   .tabItem {
                       Image(systemName: "magnifyingglass")
                   }

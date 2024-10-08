@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct MessageList: View {
+  var chat: Chat  // 传入 Chat 对象
+  
     var body: some View {
       NavigationStack{
-        MessageContent().navigationTitle("Message")
+        MessageContent().navigationTitle("\(chat.name)")
       }
     }
 }
 
-#Preview {
-    MessageList()
-}
+//#Preview {
+//    MessageList(
+//      chat: Chat
+//    )
+//}

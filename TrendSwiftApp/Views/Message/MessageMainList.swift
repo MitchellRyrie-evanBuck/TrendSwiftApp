@@ -14,21 +14,25 @@ struct ChatListView: View {
         NavigationView {
             List {
                 ForEach(viewModel.chats) { chat in
-                    HStack {
-                        Image(chat.avatar)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                            .padding(.trailing, 10)
-                        
-                        VStack(alignment: .leading) {
-                            Text(chat.name)
-                                .font(.headline)
-                            Text(chat.message)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                  NavigationLink(destination: MessageList(chat: chat ).toolbar(.hidden, for: .tabBar)) {
+                        HStack {
+                            Image(chat.avatar)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                                .padding(.trailing, 10)
+                            
+                            VStack(alignment: .leading) {
+                                Text(chat.name)
+                                    .font(.headline)
+                                Text(chat.message)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
                         }
+                        .listRowInsets(EdgeInsets()) // 移除每个列表项的内边距
+                        .padding(.vertical, 5)
                     }
                     .listRowInsets(EdgeInsets()) // 移除每个列表项的内边距
                     .padding(.vertical, 5)

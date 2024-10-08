@@ -75,6 +75,3 @@ struct MessageCardView: View {
     }
 }
 
-#Preview {
-  MessageList()
-}

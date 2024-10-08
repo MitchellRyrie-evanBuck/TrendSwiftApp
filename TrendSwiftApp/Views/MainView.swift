@@ -20,7 +20,7 @@ struct MainView: View {
                       Image(systemName: "house")
                   }
               
-            SearchContentView()
+              SearchContentView()
                   .tabItem {
                       Image(systemName: "magnifyingglass")
                   }
@@ -30,7 +30,7 @@ struct MainView: View {
                       Image(systemName: "plus.square.fill")
                   }
               
-              ActivityView()
+              MessageMainList()
                   .tabItem {
                       Image(systemName: "message")
                   }

@@ -25,9 +25,9 @@ struct MainView: View {
                       Image(systemName: "magnifyingglass")
                   }
               
-              AddPostView()
+              WordMainView()
                   .tabItem {
-                      Image(systemName: "plus.square.fill")
+                      Image(systemName: "network")
                   }
               
               MessageMainList()

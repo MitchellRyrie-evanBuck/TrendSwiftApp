@@ -116,7 +116,7 @@ struct SearchContentView: View {
   
   // Card View
   @ViewBuilder
-  func CardView(_ item: Item) -> some View {
+  func CardView(_ item: DisItem) -> some View {
     VStack(alignment: .leading, spacing: 8){
       GeometryReader{
         let size = $0.size

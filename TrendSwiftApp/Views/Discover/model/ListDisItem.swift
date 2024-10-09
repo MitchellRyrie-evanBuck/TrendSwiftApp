@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Item: Identifiable, Hashable {
+struct DisItem: Identifiable, Hashable {
   var id: String = UUID().uuidString
   var title: String
   var image: UIImage?
 }
 
 
-var sampleItems: [Item] = [
+var sampleItems: [DisItem] = [
   .init(title: "executive force", image:  UIImage(named: "background")),
   .init(title: "executive force", image:  UIImage(named: "background_2")),
   .init(title: "executive force", image:  UIImage(named: "background_3")),

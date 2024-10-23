@@ -14,8 +14,10 @@ struct ContentView: View {
         Group {
             if authViewModel.isAuthenticated {
                 MainView()
+              
             } else {
-                LoginView()
+//                LoginView()
+              FirstScreen()
             }
         }
     }

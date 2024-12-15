@@ -24,7 +24,6 @@
              .coordinateSpace(name: "scroll")
              .ignoresSafeArea()
              .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
-               print("---------->", value)
                  scrollOffset = value
              }
              
@@ -45,20 +44,25 @@
              Spacer()
              
              // 名称
-             Text("Ryice \(scrollOffset)")
+             Text("Ryice")
                  .bold()
              
              Spacer()
          }
          .padding()
          .background(Color.white.opacity(topBarOpacity))
-         .animation(.easeInOut, value: topBarOpacity)
+         .animation(.easeInOut(duration: 0.2), value: topBarOpacity)
      }
      
      // 将计算属性移到这里
      public var topBarOpacity: Double {
-//         let threshold: CGFloat = -200
-         return Double(min(1, max(0, -scrollOffset - 100) / 100))
+         let threshold: CGFloat = -100
+         
+         if scrollOffset < threshold {
+             return Double(min(1, abs(scrollOffset + threshold) / 100))
+         } else {
+             return 0
+         }
      }
      
      public var avatarScale: CGFloat {
@@ -73,6 +77,7 @@
      public var infoOpacity: Double {
          return Double(1 - min(1, max(0, -scrollOffset - 100) / 100))
      }
+     
  }
  
  #Preview {

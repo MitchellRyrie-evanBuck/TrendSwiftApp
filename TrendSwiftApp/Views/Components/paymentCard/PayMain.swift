@@ -9,7 +9,13 @@ import SwiftUI
 
 struct PayMain: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      GeometryReader{
+        let size = $0.size
+        let safeArea = $0.safeAreaInsets
+        
+        paymentCard(size: size, safeArea: safeArea)
+          .ignoresSafeArea(.container, edges: .top)
+      }
     }
 }
 

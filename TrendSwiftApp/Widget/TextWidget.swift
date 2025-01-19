@@ -1,9 +1,4 @@
-//
-//  TextWidget.swift
-//  TrendSwiftApp
-//
-//  Created by L Af on 2025/1/8.
-//
+
 
 import SwiftUI
 

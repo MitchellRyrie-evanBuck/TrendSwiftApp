@@ -2,7 +2,7 @@
 //  TrendWidgetBundle.swift
 //  TrendWidget
 //
-//  Created by 刘孝文 on 2025/1/21.
+//  Created by L Af on 2025/1/21.
 //
 
 import WidgetKit
@@ -12,5 +12,7 @@ import SwiftUI
 struct TrendWidgetBundle: WidgetBundle {
     var body: some Widget {
         TrendWidget()
+        TrendWidgetControl()
+        TrendWidgetLiveActivity()
     }
 }

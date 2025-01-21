@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C73E968A2D3FA2B900CF0B38 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73E96892D3FA2B900CF0B38 /* WidgetKit.framework */; };
-		C73E968C2D3FA2B900CF0B38 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73E968B2D3FA2B900CF0B38 /* SwiftUI.framework */; };
-		C73E96972D3FA2BB00CF0B38 /* TrendWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C73E96872D3FA2B900CF0B38 /* TrendWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FA641932D3FF49500E79FC2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641922D3FF49500E79FC2 /* WidgetKit.framework */; };
+		1FA641952D3FF49500E79FC2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641942D3FF49500E79FC2 /* SwiftUI.framework */; };
+		1FA641A62D3FF49600E79FC2 /* TrendWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C73E96952D3FA2BB00CF0B38 /* PBXContainerItemProxy */ = {
+		1FA641A42D3FF49600E79FC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FD10C1C2CA85A6D00BEC985 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C73E96862D3FA2B900CF0B38;
+			remoteGlobalIDString = 1FA6418F2D3FF49500E79FC2;
 			remoteInfo = TrendWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C73E96982D3FA2BB00CF0B38 /* Embed Foundation Extensions */ = {
+		1FA641AB2D3FF49600E79FC2 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C73E96972D3FA2BB00CF0B38 /* TrendWidgetExtension.appex in Embed Foundation Extensions */,
+				1FA641A62D3FF49600E79FC2 /* TrendWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,39 +37,49 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TrendSwiftApp.xcodeproj; sourceTree = "<group>"; };
+		1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrendWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA641922D3FF49500E79FC2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1FA641942D3FF49500E79FC2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		1FD10C242CA85A6D00BEC985 /* TrendSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73E96872D3FA2B900CF0B38 /* TrendWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrendWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73E96892D3FA2B900CF0B38 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		C73E968B2D3FA2B900CF0B38 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C73E969B2D3FA2BB00CF0B38 /* Exceptions for "TrendWidget" folder in "TrendWidgetExtension" target */ = {
+		1FA641A72D3FF49600E79FC2 /* Exceptions for "TrendWidget" folder in "TrendWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = C73E96862D3FA2B900CF0B38 /* TrendWidgetExtension */;
+			target = 1FA6418F2D3FF49500E79FC2 /* TrendWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FA641962D3FF49500E79FC2 /* TrendWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1FA641A72D3FF49600E79FC2 /* Exceptions for "TrendWidget" folder in "TrendWidgetExtension" target */,
+			);
+			path = TrendWidget;
+			sourceTree = "<group>";
+		};
 		1FD10C262CA85A6D00BEC985 /* TrendSwiftApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TrendSwiftApp;
 			sourceTree = "<group>";
 		};
-		C73E968D2D3FA2B900CF0B38 /* TrendWidget */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C73E969B2D3FA2BB00CF0B38 /* Exceptions for "TrendWidget" folder in "TrendWidgetExtension" target */,
-			);
-			path = TrendWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1FA6418D2D3FF49500E79FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA641952D3FF49500E79FC2 /* SwiftUI.framework in Frameworks */,
+				1FA641932D3FF49500E79FC2 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1FD10C212CA85A6D00BEC985 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,24 +87,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73E96842D3FA2B900CF0B38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C73E968C2D3FA2B900CF0B38 /* SwiftUI.framework in Frameworks */,
-				C73E968A2D3FA2B900CF0B38 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FA640E92D3FF19400E79FC2 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FA641912D3FF49500E79FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FA641922D3FF49500E79FC2 /* WidgetKit.framework */,
+				1FA641942D3FF49500E79FC2 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1FD10C1B2CA85A6D00BEC985 = {
 			isa = PBXGroup;
 			children = (
+				1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */,
 				1FD10C262CA85A6D00BEC985 /* TrendSwiftApp */,
-				C73E968D2D3FA2B900CF0B38 /* TrendWidget */,
-				C73E96882D3FA2B900CF0B38 /* Frameworks */,
+				1FA641962D3FF49500E79FC2 /* TrendWidget */,
+				1FA641912D3FF49500E79FC2 /* Frameworks */,
 				1FD10C252CA85A6D00BEC985 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,23 +119,36 @@
 			isa = PBXGroup;
 			children = (
 				1FD10C242CA85A6D00BEC985 /* TrendSwiftApp.app */,
-				C73E96872D3FA2B900CF0B38 /* TrendWidgetExtension.appex */,
+				1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C73E96882D3FA2B900CF0B38 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C73E96892D3FA2B900CF0B38 /* WidgetKit.framework */,
-				C73E968B2D3FA2B900CF0B38 /* SwiftUI.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1FA6418F2D3FF49500E79FC2 /* TrendWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FA641A82D3FF49600E79FC2 /* Build configuration list for PBXNativeTarget "TrendWidgetExtension" */;
+			buildPhases = (
+				1FA6418C2D3FF49500E79FC2 /* Sources */,
+				1FA6418D2D3FF49500E79FC2 /* Frameworks */,
+				1FA6418E2D3FF49500E79FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FA641962D3FF49500E79FC2 /* TrendWidget */,
+			);
+			name = TrendWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TrendWidgetExtension;
+			productReference = 1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1FD10C232CA85A6D00BEC985 /* TrendSwiftApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FD10C322CA85A6E00BEC985 /* Build configuration list for PBXNativeTarget "TrendSwiftApp" */;
@@ -127,12 +156,12 @@
 				1FD10C202CA85A6D00BEC985 /* Sources */,
 				1FD10C212CA85A6D00BEC985 /* Frameworks */,
 				1FD10C222CA85A6D00BEC985 /* Resources */,
-				C73E96982D3FA2BB00CF0B38 /* Embed Foundation Extensions */,
+				1FA641AB2D3FF49600E79FC2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C73E96962D3FA2BB00CF0B38 /* PBXTargetDependency */,
+				1FA641A52D3FF49600E79FC2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1FD10C262CA85A6D00BEC985 /* TrendSwiftApp */,
@@ -144,28 +173,6 @@
 			productReference = 1FD10C242CA85A6D00BEC985 /* TrendSwiftApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C73E96862D3FA2B900CF0B38 /* TrendWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C73E969C2D3FA2BB00CF0B38 /* Build configuration list for PBXNativeTarget "TrendWidgetExtension" */;
-			buildPhases = (
-				C73E96832D3FA2B900CF0B38 /* Sources */,
-				C73E96842D3FA2B900CF0B38 /* Frameworks */,
-				C73E96852D3FA2B900CF0B38 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C73E968D2D3FA2B900CF0B38 /* TrendWidget */,
-			);
-			name = TrendWidgetExtension;
-			packageProductDependencies = (
-			);
-			productName = TrendWidgetExtension;
-			productReference = C73E96872D3FA2B900CF0B38 /* TrendWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,14 +180,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					1FA6418F2D3FF49500E79FC2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					1FD10C232CA85A6D00BEC985 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					C73E96862D3FA2B900CF0B38 = {
-						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -196,23 +203,29 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FD10C252CA85A6D00BEC985 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1FA640E92D3FF19400E79FC2 /* Products */;
+					ProjectRef = 1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1FD10C232CA85A6D00BEC985 /* TrendSwiftApp */,
-				C73E96862D3FA2B900CF0B38 /* TrendWidgetExtension */,
+				1FA6418F2D3FF49500E79FC2 /* TrendWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1FD10C222CA85A6D00BEC985 /* Resources */ = {
+		1FA6418E2D3FF49500E79FC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73E96852D3FA2B900CF0B38 /* Resources */ = {
+		1FD10C222CA85A6D00BEC985 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,14 +235,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FD10C202CA85A6D00BEC985 /* Sources */ = {
+		1FA6418C2D3FF49500E79FC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C73E96832D3FA2B900CF0B38 /* Sources */ = {
+		1FD10C202CA85A6D00BEC985 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,14 +252,68 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C73E96962D3FA2BB00CF0B38 /* PBXTargetDependency */ = {
+		1FA641A52D3FF49600E79FC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C73E96862D3FA2B900CF0B38 /* TrendWidgetExtension */;
-			targetProxy = C73E96952D3FA2BB00CF0B38 /* PBXContainerItemProxy */;
+			target = 1FA6418F2D3FF49500E79FC2 /* TrendWidgetExtension */;
+			targetProxy = 1FA641A42D3FF49600E79FC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1FA641A92D3FF49600E79FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrendWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TrendWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = evanBuck.TrendSwiftApp.TrendWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FA641AA2D3FF49600E79FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrendWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TrendWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = evanBuck.TrendSwiftApp.TrendWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1FD10C302CA85A6E00BEC985 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -422,63 +489,18 @@
 			};
 			name = Release;
 		};
-		C73E96992D3FA2BB00CF0B38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrendWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TrendWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = evanBuck.TrendSwiftApp.TrendWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C73E969A2D3FA2BB00CF0B38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrendWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TrendWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = evanBuck.TrendSwiftApp.TrendWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1FA641A82D3FF49600E79FC2 /* Build configuration list for PBXNativeTarget "TrendWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA641A92D3FF49600E79FC2 /* Debug */,
+				1FA641AA2D3FF49600E79FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1FD10C1F2CA85A6D00BEC985 /* Build configuration list for PBXProject "TrendSwiftApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -493,15 +515,6 @@
 			buildConfigurations = (
 				1FD10C332CA85A6E00BEC985 /* Debug */,
 				1FD10C342CA85A6E00BEC985 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C73E969C2D3FA2BB00CF0B38 /* Build configuration list for PBXNativeTarget "TrendWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C73E96992D3FA2BB00CF0B38 /* Debug */,
-				C73E969A2D3FA2BB00CF0B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -16,8 +16,8 @@ struct ContentView: View {
                 MainView()
               
             } else {
-//                LoginView()
-              FirstScreen()
+                LoginView()
+//              FirstScreen()
             }
         }
     }

@@ -16,7 +16,7 @@ struct ContentView: View {
                 MainView()
               
             } else {
-                LoginView()
+                CardFor3D()
 //              FirstScreen()
             }
         }

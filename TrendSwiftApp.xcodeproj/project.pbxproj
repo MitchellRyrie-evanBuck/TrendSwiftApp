@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5B56F72D5BA801002CCC4A /* SplashScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1F5B56F62D5BA801002CCC4A /* SplashScreenKit */; };
 		1FA641932D3FF49500E79FC2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641922D3FF49500E79FC2 /* WidgetKit.framework */; };
 		1FA641952D3FF49500E79FC2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641942D3FF49500E79FC2 /* SwiftUI.framework */; };
 		1FA641A62D3FF49600E79FC2 /* TrendWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -37,7 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TrendSwiftApp.xcodeproj; sourceTree = "<group>"; };
 		1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrendWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA641922D3FF49500E79FC2 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1FA641942D3FF49500E79FC2 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -84,17 +84,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5B56F72D5BA801002CCC4A /* SplashScreenKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FA640E92D3FF19400E79FC2 /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1FA641912D3FF49500E79FC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +103,6 @@
 		1FD10C1B2CA85A6D00BEC985 = {
 			isa = PBXGroup;
 			children = (
-				1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */,
 				1FD10C262CA85A6D00BEC985 /* TrendSwiftApp */,
 				1FA641962D3FF49500E79FC2 /* TrendWidget */,
 				1FA641912D3FF49500E79FC2 /* Frameworks */,
@@ -168,6 +163,7 @@
 			);
 			name = TrendSwiftApp;
 			packageProductDependencies = (
+				1F5B56F62D5BA801002CCC4A /* SplashScreenKit */,
 			);
 			productName = TrendSwiftApp;
 			productReference = 1FD10C242CA85A6D00BEC985 /* TrendSwiftApp.app */;
@@ -200,15 +196,12 @@
 			);
 			mainGroup = 1FD10C1B2CA85A6D00BEC985;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1F5B56F52D5BA514002CCC4A /* XCRemoteSwiftPackageReference "19-Splash-Screen-for-SwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FD10C252CA85A6D00BEC985 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1FA640E92D3FF19400E79FC2 /* Products */;
-					ProjectRef = 1FA640E82D3FF19400E79FC2 /* TrendSwiftApp.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1FD10C232CA85A6D00BEC985 /* TrendSwiftApp */,
@@ -520,6 +513,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F5B56F52D5BA514002CCC4A /* XCRemoteSwiftPackageReference "19-Splash-Screen-for-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1998code/19-Splash-Screen-for-SwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F5B56F62D5BA801002CCC4A /* SplashScreenKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F5B56F52D5BA514002CCC4A /* XCRemoteSwiftPackageReference "19-Splash-Screen-for-SwiftUI" */;
+			productName = SplashScreenKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FD10C1C2CA85A6D00BEC985 /* Project object */;
 }

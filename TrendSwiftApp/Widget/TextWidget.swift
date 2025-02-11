@@ -3,13 +3,13 @@
 import SwiftUI
 
 // MARK: - 缩放过渡 (Zoom Transition)
-struct Photo: Identifiable, Hashable {
+struct ZPhoto: Identifiable, Hashable {
     let id = UUID()
     let name: String
 }
 
 struct ZoomTransitionDemo: View {
-    let samplePhotos = (1...20).map { Photo(name: "coffee-\($0)") }
+    let samplePhotos = (1...20).map { ZPhoto(name: "coffee-\($0)") }
     @Namespace() var namespace
     
     var body: some View {
@@ -66,7 +66,7 @@ struct SFSymbolsAnimationDemo: View {
 
 // MARK: - 滚动视图控制 (Scroll View Enhancements)
 struct ScrollViewDemo: View {
-    let samplePhotos = (1...20).map { Photo(name: "coffee-\($0)") }
+    let samplePhotos = (1...20).map { ZPhoto(name: "coffee-\($0)") }
     @State private var showScrollToTop = false
     
     var body: some View {

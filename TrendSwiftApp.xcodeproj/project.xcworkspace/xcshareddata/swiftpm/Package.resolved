@@ -1,0 +1,15 @@
+{
+  "originHash" : "fbd4d0ce7b1f4cef147a50e5f794eba08529f207f341d7053d0796b346540013",
+  "pins" : [
+    {
+      "identity" : "19-splash-screen-for-swiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/1998code/19-Splash-Screen-for-SwiftUI",
+      "state" : {
+        "revision" : "02fbfdad489396500764327ac1d064b66e0a2868",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

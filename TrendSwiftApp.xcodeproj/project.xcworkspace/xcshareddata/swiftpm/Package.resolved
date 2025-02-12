@@ -1,5 +1,5 @@
 {
-  "originHash" : "fbd4d0ce7b1f4cef147a50e5f794eba08529f207f341d7053d0796b346540013",
+  "originHash" : "649d484bf16051889595011efc58c43a634c8c69bb1f430f0b35aee3ec0080ff",
   "pins" : [
     {
       "identity" : "19-splash-screen-for-swiftui",
@@ -8,6 +8,33 @@
       "state" : {
         "revision" : "02fbfdad489396500764327ac1d064b66e0a2868",
         "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "drops",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/omaralbeik/Drops.git",
+      "state" : {
+        "revision" : "a183ee6f79f21c940092a19c2cba756555422371",
+        "version" : "1.7.0"
+      }
+    },
+    {
+      "identity" : "swiftnewkit?tab=readme-ov-file",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/1998code/SwiftNEWKit?tab=readme-ov-file",
+      "state" : {
+        "revision" : "f49169b2a0cce8b935d8365d6463c3e58d3f9fa5",
+        "version" : "5.8.0"
+      }
+    },
+    {
+      "identity" : "swiftvbkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/1998code/SwiftVBKit.git",
+      "state" : {
+        "revision" : "efd706f9b2522cb8f08c75a012c3c5478757379c",
+        "version" : "1.4.0"
       }
     }
   ],

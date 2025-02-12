@@ -198,6 +198,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1F5B56F52D5BA514002CCC4A /* XCRemoteSwiftPackageReference "19-Splash-Screen-for-SwiftUI" */,
+				C75EEDB12D5CB3270064F510 /* XCRemoteSwiftPackageReference "SwiftNEWKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1FD10C252CA85A6D00BEC985 /* Products */;
@@ -521,6 +522,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.1.0;
+			};
+		};
+		C75EEDB12D5CB3270064F510 /* XCRemoteSwiftPackageReference "SwiftNEWKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1998code/SwiftNEWKit?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

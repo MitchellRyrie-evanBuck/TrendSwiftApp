@@ -11,6 +11,7 @@
 		1FA641932D3FF49500E79FC2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641922D3FF49500E79FC2 /* WidgetKit.framework */; };
 		1FA641952D3FF49500E79FC2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA641942D3FF49500E79FC2 /* SwiftUI.framework */; };
 		1FA641A62D3FF49600E79FC2 /* TrendWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FA641902D3FF49500E79FC2 /* TrendWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C75EEDB62D5CE0C70064F510 /* SwiftNEW in Frameworks */ = {isa = PBXBuildFile; productRef = C75EEDB52D5CE0C70064F510 /* SwiftNEW */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5B56F72D5BA801002CCC4A /* SplashScreenKit in Frameworks */,
+				C75EEDB62D5CE0C70064F510 /* SwiftNEW in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +166,7 @@
 			name = TrendSwiftApp;
 			packageProductDependencies = (
 				1F5B56F62D5BA801002CCC4A /* SplashScreenKit */,
+				C75EEDB52D5CE0C70064F510 /* SwiftNEW */,
 			);
 			productName = TrendSwiftApp;
 			productReference = 1FD10C242CA85A6D00BEC985 /* TrendSwiftApp.app */;
@@ -539,6 +542,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F5B56F52D5BA514002CCC4A /* XCRemoteSwiftPackageReference "19-Splash-Screen-for-SwiftUI" */;
 			productName = SplashScreenKit;
+		};
+		C75EEDB52D5CE0C70064F510 /* SwiftNEW */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C75EEDB12D5CB3270064F510 /* XCRemoteSwiftPackageReference "SwiftNEWKit" */;
+			productName = SwiftNEW;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

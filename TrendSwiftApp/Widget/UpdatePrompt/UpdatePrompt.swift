@@ -14,7 +14,7 @@ struct UpdatePrompt: View {
     
     // MARK: All States
     @State var showNew: Bool = false
-
+    @State var meshNew: Bool = true
     
     var simple: some View {
         SwiftNEW(show: $showNew)
@@ -55,43 +55,8 @@ struct UpdatePrompt: View {
     }
     
     var tab: some View {
-        // MARK: Choose either one size (Simple, Mini or Invisible)
-//        TabView(selection: $preview) {
-//            simple
-//                .tabItem {
-//                    Label("Simple", systemImage: "textformat.size.larger")
-//                }
-//                .tag("Simple")
-//            mini
-//                .tabItem {
-//                    Label("Mini", systemImage: "textformat.size.smaller")
-//                }
-//                .tag("Mini")
-//            invisible
-//                .tabItem {
-//                    Label("Invisible", systemImage: "questionmark.square.dashed")
-//                }
-//                .tag("Invisible")
-//            remote
-//                .tabItem {
-//                    Label("Remote", systemImage: "cloud")
-//                }
-//                .tag("Remote")
-//            #if os(iOS)
-//            drop
-//                .tabItem {
-//                    Label("Remote", systemImage: "capsule")
-//                }
-//                .tag("Drop")
-//            #endif
-//        }
-//        .toolbar {
-//            if preview == "Mini" {
-//                SwiftNEW(show: $showNew, size: .constant("mini"))
-//            }
-//        }
-//        .navigationTitle(preview)
-        SwiftNEW(show: $showNew)
+
+        SwiftNEW(show: $showNew, mesh: $meshNew)
     }
 }
 

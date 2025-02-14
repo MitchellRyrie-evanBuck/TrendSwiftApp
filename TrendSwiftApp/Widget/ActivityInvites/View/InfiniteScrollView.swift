@@ -47,3 +47,29 @@ struct InfiniteScrollView<Content: View>: View {
 
 
 
+fileprivate struct InfiniteScrollHelper: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .clear
+        
+        DispatchQueue.main.async {
+            if let scrollView = view.scrollView{
+                
+            }
+        }
+        return view
+    }
+    func updateUIView(_ uiView: UIView, context: Context) {
+        
+    }
+}
+
+extension UIView {
+    var scrollView: UIScrollView? {
+        if let superview, superview is UIScrollView {
+            return superview as? UIScrollView
+        }
+        
+        return superview?.scrollView
+    }
+}

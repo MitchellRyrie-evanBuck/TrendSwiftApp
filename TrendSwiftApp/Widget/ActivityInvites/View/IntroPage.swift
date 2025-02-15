@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct IntroPage: View {
-    @State private var activeCard: InvitesCard? = InvitesCards.first
+  @State private var activeCard: InvitesCard? = InvitesCards.first
+  @State private var scrollPosition: ScrollPosition = .init()
+  @State private var currentScrollOffset: CGFloat = 0
+  @State private var timer = Timer.publish(
+    every: 0.01,
+    on: .current,
+    in: .default
+  ).autoconnect()
+  @State private var initialAnimation: Bool = false
+  @State private var titleProgress: CGFloat = 0
+  @State private var scrollPhase: ScrollPhase = .idle
     var body: some View {
         ZStack{
             AmbientBackground()
+            .animation(.easeInOut(duration: 1), value: activeCard)
             
             VStack(spacing: 40){
 //                ScrollView(.horizontal){
@@ -25,11 +36,79 @@ struct IntroPage: View {
                     }
                 }
                 .scrollIndicators(.hidden)
+                .scrollPosition($scrollPosition)
+                .scrollClipDisabled()
                 .containerRelativeFrame(.vertical){ value, _ in
                     value * 0.45
                 }
+                .onScrollPhaseChange( { oldPhass, newPhase in
+                  scrollPhase = newPhase
+                })
+                .onScrollGeometryChange(for: CGFloat.self){
+                  $0.contentOffset.x + $0.contentInsets.leading
+                } action: {
+ oldValue,
+ newValue in
+                  currentScrollOffset = newValue
+                  if scrollPhase != .decelerating || scrollPhase != .animating {
+                    let activeIndex = Int(
+                      (currentScrollOffset / 220).rounded()
+                    ) % InvitesCards.count
+                    
+                    activeCard = InvitesCards[activeIndex]
+                  }
+         
+                }
+                .visualEffect{ [initialAnimation] content, proxy in
+                  content.offset(y: !initialAnimation ? -(proxy.size.height + 200) : 0 )
+                }
+              
+              VStack(spacing: 4){
+                Text("Welcome to")
+                  .fontWeight(.semibold)
+                  .foregroundStyle(.white.secondary)
+                  .blurOpacityEffect(initialAnimation)
+                
+                Text("Apple Invites")
+                  .font(.largeTitle.bold())
+                  .foregroundStyle(.white)
+                  .textRenderer(CustomTextEffect(progress: titleProgress ))
+                  .padding(.bottom, 12)
+                
+                Text("Create beautiful invitations for all your events.\nAnyone can receive invitations. Sending included\n with iClound+.")
+                  .font(.callout)
+                  .multilineTextAlignment(.center)
+                  .foregroundStyle(.white.secondary)
+                  .blurOpacityEffect(initialAnimation)
+              }
+              Button {
+                timer.upstream.connect().cancel()
+              } label: {
+                Text("Create Event")
+                  .fontWeight(.semibold)
+                  .foregroundStyle(.black)
+                  .padding(.horizontal, 25)
+                  .padding(.vertical, 12)
+                  .background(.white, in: .capsule)
+              }
+              .blurOpacityEffect(initialAnimation)
             }
             .safeAreaPadding(15)
+        }
+        .onReceive(timer) { _ in
+          currentScrollOffset += 0.35
+          scrollPosition.scrollTo(x: currentScrollOffset)
+        }
+        .task {
+          try? await Task.sleep(for: .seconds(0.35))
+          
+          withAnimation(.smooth(duration: 0.75, extraBounce: 0 )){
+            initialAnimation = true
+          }
+          
+          withAnimation(.smooth(duration: 2.5, extraBounce: 0 ).delay(0.3)){
+            titleProgress = 1
+          }
         }
     }
     
@@ -79,4 +158,14 @@ struct IntroPage: View {
 
 #Preview {
     IntroPage()
+}
+
+
+extension View {
+  func blurOpacityEffect(_ show: Bool) -> some View {
+    self
+      .blur(radius: show ? 0 : 2)
+      .opacity(show ? 1 : 0)
+      .scaleEffect(show ? 1 : 0.9)
+  }
 }

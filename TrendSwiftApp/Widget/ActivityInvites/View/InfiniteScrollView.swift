@@ -8,56 +8,54 @@
 import SwiftUI
 
 struct InfiniteScrollView<Content: View>: View {
-    var spacing: CGFloat = 10
-    @ViewBuilder var content: Content
-    @State private var contentSize: CGSize = .zero
-    var body: some View {
-        GeometryReader{
-            let size = $0.size
+  var spacing: CGFloat = 10
+  @ViewBuilder var content: Content
+  @State private var contentSize: CGSize = .zero
+  var body: some View {
+    GeometryReader {
+      let size = $0.size
             
-            ScrollView(.horizontal){
-                HStack(spacing: spacing){
-                    Group(subviews: content) { collection in
-                        HStack(spacing: spacing){
-                            ForEach(collection){ view in
-                                view
-                            }
-                        }
-                        .onGeometryChange(for: CGSize.self){
-                            $0.size
-                        } action: { newValue in
-                            contentSize = .init(width: newValue.width + spacing, height: newValue.height)
-                        }
-                        
-                        let averageWidth = contentSize.width / CGFloat(collection.count)
-                        let repeatingCount = contentSize.width > 0 ? Int((size.width / averageWidth).rounded()) + 1 : 1
-                        
-                        HStack(spacing: spacing){
-                            ForEach(0..<repeatingCount, id: \.self){ index in
-                                let view = Array(collection)[index % collection.count]
-                                view
-                            }
-                        }
-                    }
-                }
-                .background(
-                  InfiniteScrollHelper(
-                    contentSize: $contentSize,
-                    declarationRate: .constant(.fast)
-                  )
-                )
+      ScrollView(.horizontal) {
+        HStack(spacing: spacing) {
+          Group(subviews: content) { collection in
+            HStack(spacing: spacing) {
+              ForEach(collection) { view in
+                view
+              }
             }
+            .onGeometryChange(for: CGSize.self) {
+              $0.size
+            } action: { newValue in
+              contentSize = .init(width: newValue.width + spacing, height: newValue.height)
+            }
+                        
+            let averageWidth = contentSize.width / CGFloat(collection.count)
+            let repeatingCount = contentSize.width > 0 ? Int((size.width / averageWidth).rounded()) + 1 : 1
+                        
+            HStack(spacing: spacing) {
+              ForEach(0 ..< repeatingCount, id: \.self) { index in
+                let view = Array(collection)[index % collection.count]
+                view
+              }
+            }
+          }
         }
+        .background(
+          InfiniteScrollHelper(
+            contentSize: $contentSize,
+            declarationRate: .constant(.fast)
+          )
+        )
+      }
     }
+  }
 }
 
 #Preview {
-    IntroPage()
+  IntroPage()
 }
 
-
-
-fileprivate struct InfiniteScrollHelper: UIViewRepresentable {
+private struct InfiniteScrollHelper: UIViewRepresentable {
   @Binding var contentSize: CGSize
   @Binding var declarationRate: UIScrollView.DecelerationRate
   
@@ -66,17 +64,17 @@ fileprivate struct InfiniteScrollHelper: UIViewRepresentable {
   }
 
   func makeUIView(context: Context) -> UIView {
-      let view = UIView(frame: .zero)
-      view.backgroundColor = .clear
+    let view = UIView(frame: .zero)
+    view.backgroundColor = .clear
       
-      DispatchQueue.main.async {
-          if let scrollView = view.scrollView{
-            context.coordinator.defaultDelegate = scrollView.delegate
-            scrollView.decelerationRate = declarationRate
-            scrollView.delegate = context.coordinator
-          }
+    DispatchQueue.main.async {
+      if let scrollView = view.scrollView {
+        context.coordinator.defaultDelegate = scrollView.delegate
+        scrollView.decelerationRate = declarationRate
+        scrollView.delegate = context.coordinator
       }
-      return view
+    }
+    return view
   }
 
   func updateUIView(_ uiView: UIView, context: Context) {
@@ -95,7 +93,6 @@ fileprivate struct InfiniteScrollHelper: UIViewRepresentable {
     weak var defaultDelegate: UIScrollViewDelegate?
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-      
       scrollView.decelerationRate = declarationRate
       let minX = scrollView.contentOffset.x
       
@@ -143,11 +140,11 @@ fileprivate struct InfiniteScrollHelper: UIViewRepresentable {
 }
 
 extension UIView {
-    var scrollView: UIScrollView? {
-        if let superview, superview is UIScrollView {
-            return superview as? UIScrollView
-        }
-        
-        return superview?.scrollView
+  var scrollView: UIScrollView? {
+    if let superview, superview is UIScrollView {
+      return superview as? UIScrollView
     }
+        
+    return superview?.scrollView
+  }
 }
